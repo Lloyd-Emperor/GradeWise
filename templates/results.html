@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GradeWise</title>
+    <link rel="icon" href="/static/logo.png" type="image/png">
+    <link rel="stylesheet" href="/static/results.css">
+</head>
+<body>
+    <header>
+        <img src="/static/logo.png" alt="GradeWise Logo">
+        <h2>GradeWise - Student Performance Evaluation</h2>
+        <p>Formal and Professional Interface for Teachers</p>
+    </header>
+    <div class="container">
+        <div class="watermark">
+            <img src="/static/logo.png" alt="Watermark">
+        </div>
+
+        <h3>Evaluation Results</h3>
+        <p><strong>Name:</strong> {{ name }}</p>
+        <p><strong>Age:</strong> {{ age }}</p>
+        <p><strong>ID:</strong> {{ student_id }}</p>
+        <h4>Scores:</h4>
+        <ul>
+            {% for score in scores %}
+                <li>Subject {{ loop.index }}: {{ score }}</li>
+            {% endfor %}
+        </ul>        
+        <p><strong>Average Score:</strong> {{ average_score }}</p>
+        <p><strong>Grade:</strong> {{ grade }}</p>
+        <p><strong>Feedback:</strong> {{ feedback }}</p>
+
+        <div class="buttons">
+            <button onclick="window.print()">Print</button>
+            <button onclick="window.location.href='/'">New Evaluation</button>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; {{ year }} GradeWise - Student Performance Evaluation System</p>
+    </footer>
+</body>
+</html>

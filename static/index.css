@@ -1,0 +1,155 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-size: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+header {
+    background-color: #004080;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    align-items: center;
+    justify-content: center;
+}
+
+header p {
+    margin-top: -1px;
+    font-style: italic;
+}
+
+header img {
+    height: 55px;
+    margin-right: 15px;
+}
+
+h2, h3 {
+    margin-bottom: 10px;
+}
+
+.container {
+    width: 50%;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.watermark {
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers the watermark */
+    opacity: 0.05; /* Adjust transparency (0 = fully transparent, 1 = fully opaque) */
+    pointer-events: none; /* Prevents the watermark from blocking clicks */
+    z-index: 1000; /* Ensures it stays on top of other elements */
+    position: absolute;
+}
+
+.watermark img {
+max-width: 500px;
+height: auto;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    max-width: 100%;
+    padding: 8px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #004080;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px auto;
+    width: 50%;
+    display: block; 
+}
+
+button:hover {
+    background-color: #003366;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #004080;
+    color: white;
+}
+
+footer img {
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    header img {
+        height: 45px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    button {
+        width: 90%;
+    }
+
+    h2, h3, label {
+        font-size: 1.2rem;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+        font-size: 1rem;
+    }
+
+    .watermark img {
+        max-width: 200px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        width: 90%; /* Adjust container width for mobile */
+        padding: 20px; /* Reduce padding on smaller screens */
+    }
+
+    button {
+        padding: 12px;
+        font-size: 16px;
+    }
+}
