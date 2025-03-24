@@ -35,7 +35,8 @@ GradeWise is a web-based application built with Flask that streamlines the proce
    flask run
    ```
 5. Access the application at:
-   ```http://127.0.0.1:5000/
+   ```bash
+   http://127.0.0.1:5000/
    ```
 
 ## Usage
