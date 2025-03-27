@@ -130,7 +130,7 @@ footer {
     }
 
     .watermark img {
-        max-width: 200px;
+        max-width: 300px;
     }
 }
 
@@ -149,7 +149,7 @@ footer {
         padding: 0;
     }
     header, footer, button {
-        display: all; /* Hide header, footer, and buttons during print */
+        display: all;
     }
 
     .container {

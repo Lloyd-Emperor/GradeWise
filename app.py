@@ -7,14 +7,16 @@ def calculate_average_score(scores):
     return sum(scores) / len(scores)
 
 def assign_grade(average_score):
-    if average_score >= 80:
+    if average_score >= 70:
         return "A"
-    elif average_score >= 70:
-        return "B"
     elif average_score >= 60:
+        return "B"
+    elif average_score >= 50:
         return "C"
     elif average_score >= 50:
         return "D"
+    elif average_score >= 40:
+        return "E"
     else:
         return "F"
 
@@ -24,6 +26,7 @@ def provide_feedback(grade):
         "B": "Good job! You can do even better.",
         "C": "Fair effort! Work harder next time.",
         "D": "Needs improvement. Keep practicing.",
+        "E": "Weak performance. Focus on improving and don't give up.",
         "F": "Poor performance. Seek help and try again."
     }
     return feedback[grade]
@@ -59,4 +62,4 @@ def index():
     return render_template("index.html", year=current_year)
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=10000)
+    app.run(host="0.0.0.0", port=5000)
